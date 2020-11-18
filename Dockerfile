@@ -1,4 +1,4 @@
-FROM maven AS builder
+FROM maven:3.6.1-jdk-7-alpine AS builder
 WORKDIR /work
 RUN git clone https://github.com/maodou38/JrebelLicenseServerforJava.git
 WORKDIR /work/JrebelLicenseServerforJava
