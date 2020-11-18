@@ -1,6 +1,6 @@
 FROM maven AS builder
 WORKDIR /work
-RUN git clone https://github.com/maodou38/JrebelLicenseServerforJava.git&&maven package
+RUN git clone https://github.com/maodou38/JrebelLicenseServerforJava.git&&mvn package
 
 FROM openjdk:7-jre-alpine
 ENV PORT 8081
