@@ -5,5 +5,5 @@ WORKDIR /work/JrebelLicenseServerforJava
 RUN mvn package
 FROM openjdk:7-jre-alpine
 ENV PORT 8081
-COPY --from=builder /work/JrebelLicenseServerforJava/JrebelBrainsLicenseServerforJava-1.0-SNAPSHOT-jar-with-dependencies.jar /JrebelBrainsLicenseServerforJava.jar
+COPY --from=builder /work/JrebelLicenseServerforJava/target/JrebelBrainsLicenseServerforJava-1.0-SNAPSHOT-jar-with-dependencies.jar /JrebelBrainsLicenseServerforJava.jar
 CMD java -jar /JrebelBrains.jar -p $PORT
